@@ -1,0 +1,58 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>2fe565d3-9ac0-4ff0-a580-68a00cb3b75c</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>YOLOdetection.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>YOLOdetection</Name>
+    <RootNamespace>YOLOdetection</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="YOLOdetection.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
+    <Folder Include="videos\" />
+    <Folder Include="output\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="coco.names" />
+    <Content Include="images\baggage_claim.jpg" />
+    <Content Include="images\dining_table.jpg" />
+    <Content Include="images\object.jpeg" />
+    <Content Include="images\pivot.jpeg" />
+    <Content Include="images\seethe.jpeg" />
+    <Content Include="images\objects %284%29.jpeg" />
+    <Content Include="images\objects %285%29.jpeg" />
+    <Content Include="images\objects %286%29.jpeg" />
+    <Content Include="images\soccer.jpg" />
+    <Content Include="videos\airport.mp4" />
+    <Content Include="videos\car_chase_01.mp4" />
+    <Content Include="videos\car_chase_02.mp4" />
+    <Content Include="videos\overpass.mp4" />
+    <Content Include="yolov3.cfg" />
+    <Content Include="yolov3.weights" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
